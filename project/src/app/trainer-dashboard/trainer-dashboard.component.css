@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.container {
+  max-width: 900px;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.table img {
+  max-width: 100px;
+  height: auto;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+button {
+  margin: 5px 0;
+}

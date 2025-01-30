@@ -1,0 +1,31 @@
+<div class="container py-5">
+    <h2 class="text-center mb-4">
+      Meet our <span class="text-primary">Teachers</span>.
+    </h2>
+    <p class="text-center text-muted mb-5">
+      With years of experience and a commitment to excellence, our educators ensure every student thrives.
+    </p>
+    <!-- This is 1 way data binding, TS to HTML bcz data from teaches array in ts is coming in html by using ngfor loop-->
+    <div class="row g-4">
+      <div class="col-md-4" *ngFor="let teacher of teachers">
+        <div class="card text-center ">
+          <img
+            [src]="teacher.image"
+            class="rounded-circle mx-auto mt-4"
+            alt="Teacher Image"
+            width="80"
+            height="80"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ teacher.name }}</h5>
+            <p class="text-primary mb-1">{{ teacher.role }}</p>
+            <p class="card-text text-muted">
+              {{ teacher.description }}
+            </p>
+            <a href="#" class="btn btn-outline-primary btn-sm">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

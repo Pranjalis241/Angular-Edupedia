@@ -1,0 +1,22 @@
+.explore-button-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.explore-button {
+    background-color: #1480f3; /* Blue background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding for size */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Adjust font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    transition: all 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Hover effect for button */
+.explore-button:hover {
+    background-color: #044c99; /* Darker blue on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}

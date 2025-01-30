@@ -1,0 +1,60 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, rgb(247, 206, 213), rgb(202, 235, 247));
+  padding: 10px 20px;
+  box-shadow: 4px 4px 12px rgba(78, 74, 74, 0.8);
+}
+
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 20px;
+}
+
+.navbar-nav a {
+  margin: 0 15px;
+  font-weight: bold;
+  text-decoration: none;
+  color: purple;
+}
+
+.navbar-nav a:hover {
+  color: blue;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav button {
+  margin: 0 15px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Optional: Adjust the navbar background */
+.navbar-light {
+  background: linear-gradient(61deg, rgba(255, 203, 215, 1) 10%, rgba(214, 255, 239, 1) 100%);
+}
+
+.btn:hover {
+  background-color: #6e0369 !important; /* Change background color on hover */
+  color: white !important; /* Change text color on hover */
+  transform: scale(1.05); /* Slight zoom-in effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional box shadow */
+}
+
+.dropdown-menu .dropdown-item {
+  text-decoration: none; /* Remove underline or other decorations */
+  padding: 8px 15px; /* Ensure consistent padding */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: transparent; /* Highlight background on hover */
+  color: blue; /* Change text color */
+  text-decoration: none; /* Keep underline or other decorations off */
+  box-shadow: none; /* Ensure no extra shadow */
+}

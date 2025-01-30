@@ -1,0 +1,14 @@
+<div class="faq-container">
+    <h2>Frequently Asked Questions</h2>
+  
+    <div class="accordion" *ngFor="let faq of faqs">
+      <button class="accordion-button" (click)="togglePanel(faq)">
+        {{ faq.question }}
+        <span class="arrow" [ngClass]="{'rotate': faq.active}">▼</span>
+      </button>
+      <div class="panel" [ngClass]="{'active': faq.active}">
+        <p>{{ faq.answer }}</p>
+      </div>
+    </div>
+  </div>
+  

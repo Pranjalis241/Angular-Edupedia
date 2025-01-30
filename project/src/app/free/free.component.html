@@ -1,0 +1,33 @@
+<h1 class="text-center mb-4 fw-bold" style="padding-top: 30px; font-family:lora">
+  Our <span class="text-primary">Free</span> Courses.
+</h1>
+<div class="card-container">
+  <mat-card class="p-card" *ngFor="let course of courses; let i = index">
+    <mat-card-header>
+      <div mat-card-avatar class="avatar"></div>
+      <mat-card-title><u>{{ course.title }}</u></mat-card-title>
+      <mat-card-subtitle style="padding: 15px;">By: {{ course.author }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="course.image" [alt]="course.title">
+    <mat-card-content>
+      <p>{{ course.description }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-icon-button (click)="toggleFavorite(i)">
+        <mat-icon [ngClass]="{'favorite': favorites[i]}">favorite</mat-icon>
+      </button>
+      <button 
+        mat-icon-button 
+        (click)="toggleThumb(i)" 
+        matBadge="{{ratings[i]}}" 
+        matBadgeOverlap="true" 
+        matBadgeColor="accent" 
+        [ngClass]="{'thumb-active': thumbStates[i]}">
+        <mat-icon>thumb_up</mat-icon>
+      </button>
+      <button mat-icon-button>
+        <mat-icon>share</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

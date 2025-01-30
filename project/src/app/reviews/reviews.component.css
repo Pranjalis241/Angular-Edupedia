@@ -1,0 +1,70 @@
+.quote-image {
+  width: 50px; /* Adjust image size */
+  height: auto;
+  margin: 0 10px; /* Add spacing between the images and the review box */
+  position: relative;
+  top: -70px; /* Moves the image upward */
+}
+
+  .review-container {
+    width: 100%;
+    max-width: 800px;
+    height: 200px; /* Set the height of the review container */
+    overflow: hidden;
+    margin: 50px auto;
+    text-align: center;
+    background-color: #cbf8b0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+
+  }
+  
+  .reviews {
+    display: flex;
+    flex-direction: column;
+    animation: scroll 32s linear infinite;
+ 
+  }
+  
+  .review {
+    padding: 20px;
+  }
+  
+  .review h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: rgb(20, 20, 20);
+    
+  }
+  
+  .review p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color:#161616;
+    font-family: 'Merriweather', serif;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateY(0%);
+    }
+    20% {
+      transform: translateY(-20%);
+    }
+    40% {
+      transform: translateY(-40%);
+    }
+    60% {
+      transform: translateY(-60%);
+    }
+    80% {
+      transform: translateY(-80%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  
+  
+  

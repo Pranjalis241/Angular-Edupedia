@@ -1,0 +1,98 @@
+.heading {
+    font-family: 'Poppins', sans-serif; /* Replace with your preferred font */
+    font-size: 2em;
+    text-align: center;
+    color: #333; /* Default color for the text */
+    margin-top: 10px;
+    font-family: 'Lora', serif;
+   
+    
+  }
+  .back{
+   
+    /* background: linear-gradient(to right, pink, rgb(164, 227, 248));
+    background: linear-gradient(to right, rgb(247, 206, 213), rgb(202, 235, 247));
+    background: linear-gradient(61deg, rgba(255, 203, 215, 1) 10%, rgba(214, 255, 239, 1) 10%); */
+    background: 
+  linear-gradient(61deg, rgb(250, 222, 228) 50%, rgba(214, 255, 239, 1) 10%), 
+  linear-gradient(61deg, rgba(214, 255, 239, 1 )60%,  rgb(253, 212, 222)10%);
+
+/* Creates the square pattern by defining the size of the gradient */
+
+  }
+  .heading .highlight {
+    /* Bright color for highlight */
+    font-weight: bold;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    border: 2px solid #da89c5; /* Adds a solid border */
+    padding: 5px 10px; /* Adds spacing around the text */
+    border-radius: 20px; /* Rounded edges for a modern look */
+   
+  
+    transition: all 0.3s ease-in-out;
+    background-color:rgb(78, 108, 245);
+    color: #fff; 
+    box-shadow: 4px 4px 12px rgba(255, 87, 51, 0.8);
+  }
+  
+  .heading .highlight:hover {
+    background-color: #fff5e6;
+    color: #3341ff;
+    box-shadow: 2px 2px 8px rgba(255, 87, 51, 0.5);
+  }
+  
+
+ 
+  .card-img-top {
+    height: 220px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the container */
+  }
+
+
+  
+  .about-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgb(255, 204, 211);
+    background: #fdd5e6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+  }
+  
+  .about-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+  
+  .about-header h1 {
+    font-size: 36px;
+    color: #333;
+  }
+  
+  .about-header h1 span {
+    display: block;
+    font-size: 28px;
+    color: #555;
+  }
+  
+  .about-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgb(51, 50, 50);
+   
+  }
+  .high{
+    font-size: 24px;
+    color: #4e063f;
+    font-weight: bold;
+  }
+  

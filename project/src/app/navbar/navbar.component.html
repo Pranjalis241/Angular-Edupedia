@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background: linear-gradient(61deg, rgba(255, 203, 215, 1) 10%, rgba(214, 255, 239, 1) 100%);">
+  <div class="logo">
+    <img src="\image\logo.jpg" alt="Edupedia Logo" class="navbar-brand" />
+  </div>
+
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="navbar-nav ms-auto"> <!-- Add ms-auto to align to the right -->
+      <a class="nav-link" routerLink="/home">Home</a>
+
+      <!-- Courses Button with Dropdown -->
+      <div class="dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Courses
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+          <li><a class="dropdown-item" routerLink="/courses">All Courses</a></li>
+          <li><a class="dropdown-item" routerLink="/free">Free Courses</a></li>
+          <li><a class="dropdown-item" routerLink="/others">Others</a></li>
+        </ul>
+      </div>
+
+      <a class="nav-link" routerLink="/instructors">Instructors</a>
+      <a class="nav-link" routerLink="/faq">FAQs</a>
+      <a class="nav-link" routerLink="/contact">Contact Us</a>
+
+     <!-- Login and Signup Buttons -->
+<button *ngIf="!isLoggedIn()" class="btn btn-outline-primary" routerLink="/signup" style="background-color: rgb(177, 64, 177); color: aliceblue;">Signup</button>
+<button *ngIf="!isLoggedIn()" class="btn btn-outline-secondary" routerLink="/login" style="background-color: rgb(177, 64, 177); color: aliceblue;">Login</button>
+
+<!-- Logout Button -->
+<button *ngIf="isLoggedIn()" class="btn btn-outline-danger" (click)="logout()" style="background-color: rgb(218, 39, 241); color: aliceblue;">Logout</button>
+
+<!-- Conditional dashboard buttons based on role -->
+<button *ngIf="isLoggedIn() && getUserRole() === 'user'" class="btn btn-outline-info" routerLink="/user-dashboard" style="background-color: rgb(0, 123, 255); color: white;">User Dashboard</button>
+
+<button *ngIf="isLoggedIn() && getUserRole() === 'trainer'" class="btn btn-outline-info" routerLink="/trainer-dashboard" style="background-color: rgb(0, 123, 255); color: white;">Trainer Dashboard</button>
+<button *ngIf="isLoggedIn() && getUserRole() === 'admin'" class="btn btn-outline-info" routerLink="/admin-dashboard" style="background-color: rgb(0, 123, 255); color: white;">Admin Dashboard</button>
+
+ </div>
+  </div>
+</nav>

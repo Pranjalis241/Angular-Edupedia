@@ -1,0 +1,162 @@
+<!-- <div class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+  <div class="card p-3 shadow" style="max-width: 600px; width: 100%;">
+   
+  -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* Apply the Google Font to <p> elements */
+    p {
+      font-family: 'lora', sans-serif;
+      font-size: 19px; /* Adjust font size if needed */
+      color: #333; /* Dark text color for readability */
+    }
+  </style>
+  
+    <h1 class="text-center my-5 fw-bold" style="font-family:lora">
+      Welcome in User Dashboard, <span style="color: rgb(218, 13, 201);">{{ user.name }}</span>
+    </h1>
+    <div class="explore-button-container">
+      <button class="explore-button" routerLink="/courses">Click here to add courses</button>
+    </div>
+  
+    <div class="container mt-4">
+      <!-- Flexbox layout for larger screens; stacks vertically on smaller screens -->
+      <div class="row g-4">
+        <!-- User Details -->
+        <div class="col-12 col-md-6">
+          <div class="card p-3 shadow mb-4" style="background: linear-gradient(to bottom, #a5edff , #fad0c4 50%);">
+            <h1 class="text-center mb-4 fw-bold" style="font-family:lora">
+              <span class="text-primary">User Details</span>
+            </h1>
+            <div class="row align-items-center">
+              <div class="col-5 text-center">
+                <img src="\image\user.jpg" alt="user" class="img-fluid rounded-circle" />
+              </div>
+              <div class="col-7 ps-5">
+                <p><strong>Name:</strong> {{ user.name }}</p>
+                <p><strong>Email:</strong> {{ user.email }}</p>
+                <p><strong>Phone:</strong> {{ user.phone || "Not Provided" }}</p>
+                <p><strong>Role:</strong> {{ user.role }}</p>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center mt-3">
+              <button
+                class="btn btn-md btn-success px-4 py-2"
+                (click)="openEditModal(user)"
+                data-bs-toggle="modal"
+                data-bs-target="#editUserModal"
+              >
+                Edit Profile
+              </button>
+            </div>
+            
+            
+          </div>
+        </div>
+  
+        <!-- Enrolled Courses -->
+        <div class="col-12 col-md-6">
+          <div class="card p-3 shadow mb-4"style="background: linear-gradient(to bottom, #a5edff , #fad0c4 50%)">
+            <h1 class="text-center mb-4 fw-bold" style="font-family:lora">
+              <span class="text-primary">Enrolled Courses</span>
+            </h1>
+            <div *ngIf="user?.courses?.length > 0">
+              <ul>
+                <li *ngFor="let course of user.courses" class="mb-3">
+                  {{ course.title }}
+                  <button class="btn btn-danger btn-sm ms-2" (click)="deleteCourse(course.id)">Delete</button>
+                </li>
+              </ul>      
+            </div>           
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2 class="text-center my-4" style="font-family:lora">Your Learning Progress</h2>
+<div style="width: 400px; height: 400px; margin: auto;">
+  <canvas #chartCanvas></canvas>
+</div>
+
+<!-- Edit User Modal -->
+<div
+  class="modal fade"
+  id="editUserModal"
+  tabindex="-1"
+  aria-labelledby="editUserModalLabel"
+  aria-hidden="true"
+ >
+  <div class="modal-dialog" style="font-family: merriweather;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title text-center w-100" id="editUserModalLabel">Edit User</h4>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form (ngSubmit)="updateUser()">
+          <div class="mb-3">
+            <label for="editName" class="form-label">Name</label>
+            <input
+              type="text"
+              id="editName"
+              class="form-control"
+              [(ngModel)]="selectedUser.name"
+              name="name"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="editDob" class="form-label">Date of Birth</label>
+            <input
+              type="date"
+              id="editDob"
+              class="form-control"
+              [(ngModel)]="selectedUser.dob"
+              name="dob"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="editEmail" class="form-label">Phone no.</label>
+            <input
+              type="phone"
+              id="editPhone"
+              class="form-control"
+              [(ngModel)]="selectedUser.phone"
+              name="phone"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="editRole" class="form-label">Role</label>
+            <select
+              id="editRole"
+              class="form-select"
+              [(ngModel)]="selectedUser.role"
+              name="role"
+              required
+            >
+              <option value="user">User</option>
+              <option value="trainer">Trainer</option>
+              <option value="admin">Admin</option>
+            </select>
+          </div>
+          <button
+            type="submit"
+            class="btn btn-success w-100"
+            data-bs-dismiss="modal"
+          >
+            Save Changes
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  

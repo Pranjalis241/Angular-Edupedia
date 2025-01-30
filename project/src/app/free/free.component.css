@@ -1,0 +1,81 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-evenly;
+  margin: 20px 0; /* 50px → Applies to top and bottom, 0 → Applies to left and right */
+}
+
+.p-card {
+  width: 300px;
+  margin: 8px;
+  flex-shrink: 0; /* Ensures consistent card size when wrapping */
+}
+
+mat-card {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Shadow on all sides */
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column; /* Ensures content flows vertically */
+}
+
+mat-card:hover {
+  transform: translateY(-5px); /* Adds lift effect on hover */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+mat-card img {
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0; /* Rounded corners for the top of the card */
+}
+
+mat-card-title {
+  font-weight: bold;
+  font-size: 24px; /* Reduce font size for better fit */
+  padding-top: 12px;
+  font-family: lora;
+  text-align: center;
+  white-space: nowrap; /* Prevents wrapping */
+  overflow: hidden; /* Hides overflow text */
+  text-overflow: ellipsis;
+  text-align: center;
+ 
+}
+
+mat-card-subtitle {
+  text-align: center; /* Centers the subtitle */
+  font-family: "Merriweather", serif;
+}
+
+mat-card-content {
+  padding: 20px;
+  font-family: "Merriweather", serif;
+  flex-grow: 1; /* Ensures content takes up available space */
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: space-between; /* Spreads buttons evenly */
+  align-items: center;
+  padding: 0 16px 16px; /* Adds padding for button section */
+}
+
+.favorite {
+  color: red;
+}
+
+/* Thumb active class for red color */
+.thumb-active mat-icon {
+  color: red;
+}
+.avatar {
+  display: none;
+}
+mat-card-header {
+  display: flex;
+  flex-direction: column; /* Stack title and subtitle vertically */
+  align-items: center; /* Center-align the content */
+  text-align: center;
+}

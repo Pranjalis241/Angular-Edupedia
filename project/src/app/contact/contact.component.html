@@ -1,0 +1,144 @@
+<div class="container py-5 contact-container">
+  <div class="row g-5">
+    <!-- Left Section -->
+    <div class="col-md-6 left-section">
+      <h1>Get in touch with us</h1>
+      <p>Don't hesitate to contact us for further details.</p>
+      <p><strong>📞 +123 456 7890</strong></p>
+      <p><strong>✉️ contact.edupedia.com</strong></p>
+      <p>
+        <strong
+          >📍 Impelsys, IWF Campus, Mahadevapura, Bengaluru, Karnataka</strong
+        >
+      </p>
+      <div class="ratio ratio-16x9">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.1266607020324!2d77.69576141534033!3d12.991702518929785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1275a70d0e27%3A0x27b70493f83f5dc9!2sImpelsys!5e0!3m2!1sen!2sin!4v1689081946072!5m2!1sen!2sin"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="col-md-6 right-section">
+      <!-- <h2>Contact Us</h2> -->
+      <form
+        #contactForm="ngForm"
+        (ngSubmit)="onSubmit()"
+        style="padding-top: 40px"
+       >
+        <!-- Name Field -->
+        <div class="mb-3">
+          <label for="name" class="form-label">Name*</label>
+          <input
+            type="text"
+            id="name"
+            class="form-control"
+            name="name"
+            [(ngModel)]="contact.name"
+            required
+            pattern="^[A-Za-z ]+$"
+            minlength="3"
+          />
+          <div
+            class="text-danger mt-1"
+            *ngIf="
+              contactForm.form.controls['name']?.invalid &&
+              contactForm.form.controls['name']?.touched
+            "
+          >
+            <small
+              *ngIf="contactForm.form.controls['name']?.errors?.['required']"
+              >Name is required.</small
+            >
+            <small
+              *ngIf="contactForm.form.controls['name']?.errors?.['minlength']"
+              >Name must be at least 3 characters long.</small
+            >
+            <small
+              *ngIf="contactForm.form.controls['name']?.errors?.['pattern']"
+              >Name can only contain letters and spaces.</small
+            >
+          </div>
+        </div>
+
+        <!-- Email Field -->
+        <div class="mb-3">
+          <label for="email" class="form-label">Email*</label>
+          <input
+            type="email"
+            id="email"
+            class="form-control"
+            name="email"
+            [(ngModel)]="contact.email"
+            required
+            email
+          />
+          <div
+            class="text-danger mt-1"
+            *ngIf="
+              contactForm.form.controls['email']?.invalid &&
+              contactForm.form.controls['email']?.touched
+            "
+          >
+            <small
+              *ngIf="contactForm.form.controls['email']?.errors?.['required']"
+              >Email is required.</small
+            >
+            <small *ngIf="contactForm.form.controls['email']?.errors?.['email']"
+              >Enter a valid email address.</small
+            >
+          </div>
+        </div>
+
+        <!-- Message Field -->
+        <div class="mb-3">
+          <label for="message" class="form-label">Your Message*</label>
+          <textarea
+            id="message"
+            class="form-control"
+            name="message"
+            rows="5"
+            [(ngModel)]="contact.message"
+            required
+          ></textarea>
+          <div
+            class="text-danger mt-1"
+            *ngIf="
+              contactForm.form.controls['message']?.invalid &&
+              contactForm.form.controls['message']?.touched
+            "
+          >
+            <small
+              *ngIf="contactForm.form.controls['message']?.errors?.['required']"
+              >Message is required.</small
+            >
+          </div>
+        </div>
+        <!-- add message when form submit -->
+        <div *ngIf="successMessage" class="alert alert-success">
+          {{ successMessage }}
+        </div>
+        <!-- Submit Button -->
+        <button
+          type="submit"
+          class="btn btn-primary w-100"
+          [disabled]="!contactForm.valid"
+        >
+          Send
+        </button>
+        <button
+          type="button"
+          class="btn btn-secondary w-100 mt-2"
+          (click)="onRefresh()"
+        >
+          Refresh
+        </button>
+      </form>
+
+      <!-- Refresh Button -->
+    </div>
+  </div>
+</div>

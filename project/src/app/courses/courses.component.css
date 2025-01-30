@@ -1,0 +1,52 @@
+.container {
+    margin-top: 20px;
+    font-family: 'lora', serif;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  .form-group {
+    margin-bottom: 30px;
+  }
+  .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    color: #555;
+  }
+  input::placeholder {
+    color: #3b3a3a; /* Change this to your desired placeholder color */
+  }
+  .price-box {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }

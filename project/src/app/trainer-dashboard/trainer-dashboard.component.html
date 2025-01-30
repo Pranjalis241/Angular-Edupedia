@@ -1,0 +1,174 @@
+<h1 class="text-center my-5 fw-bold" style="font-family: lora">
+  Welcome in Trainer Dashboard, <span style="color: rgb(218, 13, 201)">{{ user.name }}</span>
+</h1>
+
+<!-- User Details -->
+<div class="container">
+  <div class="col-12 col-md-6">
+    <div
+      class="card p-3 shadow mb-4"
+      style="background: linear-gradient(to bottom, #a5edff, #fad0c4 50%)"
+    >
+      <h1 class="text-center mb-4 fw-bold" style="font-family: lora">
+        <span class="text-primary">Trainer Details</span>
+      </h1>
+      <div class="row align-items-center">
+        <div class="col-5 text-center">
+          <img
+            src="\image\user.jpg"
+            alt="user"
+            class="img-fluid rounded-circle"
+          />
+        </div>
+        <div class="col-7 ps-5">
+          <p><strong>Name:</strong> {{ user.name }}</p>
+          <p><strong>Email:</strong> {{ user.email }}</p>
+          <p><strong>Phone:</strong> {{ user.phone || "Not Provided" }}</p>
+          <p><strong>Role:</strong> {{ user.role }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div *ngIf="user?.role === 'trainer'">
+  <h3>Add a New Course</h3>
+  <form (ngSubmit)="addCourse()">
+    <label for="title">Title:</label>
+    <input id="title" [(ngModel)]="newCourse.title" name="title" required />
+
+    <label for="description">Description:</label>
+    <textarea
+      id="description"
+      [(ngModel)]="newCourse.description"
+      name="description"
+      required
+    ></textarea>
+
+    <label for="image">Image URL:</label>
+    <input id="image" [(ngModel)]="newCourse.image" name="image" />
+
+    <label for="price">Price:</label>
+    <input id="price" [(ngModel)]="newCourse.price" name="price" required />
+
+    <button type="submit">Add Course</button>
+  </form>
+</div>
+<div *ngIf="user?.courses?.length > 0">
+  <h3>Your Courses</h3>
+  <ul>
+    <li *ngFor="let course of user.courses">
+      <h4>{{ course.title }}</h4>
+      <p>{{ course.description }}</p>
+      <p>Price: {{ course.price }}</p>
+      <p>Teacher: {{ course.teacher }}</p>
+      <button (click)="deleteCourse(course.id)">Delete</button>
+     
+    </li>
+  </ul>
+</div>
+<div *ngIf="!user?.courses?.length">
+  <p>You haven't added any courses yet.</p>
+</div> -->
+
+  
+
+  <!-- Button to open the Add Course Modal -->
+  <div class="d-flex justify-content-center mb-3">
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCourseModal">
+      Add Course
+    </button>
+  </div>
+
+  <!-- Table to display courses -->
+  <div class="table-responsive" style="max-width: 80%; margin: 0 auto;">
+    <table class="table table-striped table-bordered align-middle" style="border-radius: 10px; overflow: hidden;">
+      <thead class="table-dark">
+        <tr>
+        <th class="text-center">Title</th>
+        <th class="text-center">Description</th>
+        <th class="text-center">Image</th>
+        <th class="text-center">Price</th>
+        <th class="text-center">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let course of user?.courses">
+          <td class="text-center">{{ course.title }}</td>
+          <td class="text-center">{{ course.description }}</td>
+          <td class="text-center">
+            <img [src]="course.image" alt="{{ course.title }}" class="img-thumbnail" style="max-width: 100px;">
+          </td>
+          <td class="text-center">{{ course.price }}</td>
+          <td class="text-center">
+            <button class="btn btn-danger btn-sm" (click)="deleteCourse(course.id)">
+              Delete
+            </button>
+          </td>
+        </tr>
+        <tr *ngIf="!user?.courses?.length">
+          <td colspan="5" class="text-center">No courses added yet.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Add Course Modal -->
+  <div class="modal fade" id="addCourseModal" tabindex="-1" aria-labelledby="addCourseModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addCourseModalLabel">Add Course</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form (ngSubmit)="addCourse()" #courseForm="ngForm">
+            <div class="mb-3">
+              <label for="courseTitle" class="form-label">Title</label>
+              <input
+                type="text"
+                id="courseTitle"
+                class="form-control"
+                [(ngModel)]="newCourse.title"
+                name="title"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="courseDescription" class="form-label">Description</label>
+              <textarea
+                id="courseDescription"
+                class="form-control"
+                [(ngModel)]="newCourse.description"
+                name="description"
+                required
+              ></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="courseImage" class="form-label">Image URL</label>
+              <input
+                type="text"
+                id="courseImage"
+                class="form-control"
+                [(ngModel)]="newCourse.image"
+                name="image"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="coursePrice" class="form-label">Price</label>
+              <input
+                type="text"
+                id="coursePrice"
+                class="form-control"
+                [(ngModel)]="newCourse.price"
+                name="price"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-success w-100" [disabled]="courseForm.invalid" data-bs-dismiss="modal">Add Course</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  
+

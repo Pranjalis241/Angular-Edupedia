@@ -1,0 +1,27 @@
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Shadow on all sides */
+   transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .card:hover {
+    transform: translateY(-5px); /* Adds lift effect on hover */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+  }
+  
+  .card img {
+    width: 120px; /* Increased image size */
+    height: 120px; /* Match height for a perfect circle */
+    border-radius: 50%;
+    /* border: 3px solid #ddd; */
+    padding: 4px;
+  }
+  .card-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  .card-text {
+    font-size: 0.95rem;
+  }
+  

@@ -1,0 +1,252 @@
+{
+  "users": [
+    {
+      "id": "638a",
+      "name": "Karan",
+      "email": "k@gmail.com",
+      "dob": "2025-01-02",
+      "role": "user",
+      "phone": "9874339997",
+      "password": "karan1",
+      "confirmPassword": "karan1",
+      "terms": true,
+      "courses": [
+        {
+          "id": "6",
+          "title": "Computer Networks",
+          "description": "Gain a comprehensive understanding of computer networks, including network architecture using TCP/IP, wireless networks, and network troubleshooting.",
+          "image": "\\image\\cn.webp",
+          "price": "$220",
+          "teacher": "Diana Evans"
+        },
+        {
+          "id": "4",
+          "title": "Cybersecurity",
+          "description": " Learn the basics of cybersecurity and how to protect systems and data from cyber threats by learning cryptography, network security, and risk management.",
+          "image": "\\image\\cs.jpeg",
+          "price": "$200",
+          "teacher": "Bob Brown"
+        }
+      ]
+    },
+    {
+      "id": "7428",
+      "name": "Pranjali",
+      "email": "p@g.com",
+      "dob": "2025-01-11",
+      "role": "trainer",
+      "phone": "7868999999",
+      "password": "trainer",
+      "confirmPassword": "trainer",
+      "terms": true,
+      "courses": []
+    },
+    {
+      "id": "7477",
+      "name": "Shreya",
+      "email": "s@g.com",
+      "dob": "2025-01-11",
+      "role": "admin",
+      "phone": "7868765999",
+      "password": "admin12",
+      "confirmPassword": "admin12",
+      "terms": true
+    },
+    {
+      "id": "f96c",
+      "name": "Naman",
+      "email": "users@gmail.com",
+      "dob": "2025-02-08",
+      "role": "user",
+      "phone": "7897654444",
+      "password": "userss",
+      "confirmPassword": "userss",
+      "terms": true,
+      "courses": [
+        {
+          "id": "4",
+          "title": "Cybersecurity",
+          "description": " Learn the basics of cybersecurity and how to protect systems and data from cyber threats by learning cryptography, network security, and risk management.",
+          "image": "\\image\\cs.jpeg",
+          "price": "$200",
+          "teacher": "Bob Brown"
+        }
+      ]
+    },
+    {
+      "id": "522f",
+      "name": "Vidhi",
+      "email": "v@g.cm",
+      "dob": "2025-01-11",
+      "role": "user",
+      "phone": "8989898999",
+      "password": "vidhi1",
+      "confirmPassword": "vidhi1",
+      "terms": true,
+      "courses": [
+        {
+          "id": "3",
+          "title": "Machine Learning",
+          "description": "Explore the exciting field of machine learning by learning key concepts such as supervised and unsupervised learning, neural networks, and deep learning.",
+          "image": "\\image\\machine.jpg",
+          "price": "$150",
+          "teacher": "Alice Johnson"
+        },
+        {
+          "id": "2",
+          "title": "Cloud Computing",
+          "description": "Learn about cloud computing concepts and services like AWS, Azure, and Google Cloud,along with hands-on experience in cloud-based application.",
+          "image": "\\image\\cloud.jpg",
+          "price": "$120",
+          "teacher": "Jane Smith"
+        }
+      ]
+    },
+    {
+      "id": "4b45",
+      "name": "Jiyaa",
+      "email": "j@gmail.com",
+      "dob": "2025-01-01",
+      "role": "trainer",
+      "phone": "6543267777",
+      "password": "jiyaaa",
+      "confirmPassword": "jiyaaa",
+      "terms": true
+    }
+  ],
+  "contacts": [
+    {
+      "id": "f969",
+      "name": "Amit",
+      "email": "amit12@gmail.com",
+      "message": "Hello"
+    },
+    {
+      "id": "e3f8",
+      "name": "Jiyaa",
+      "email": "j@gmail.com",
+      "message": "hi there"
+    },
+    {
+      "id": "4c67",
+      "name": "Jack",
+      "email": "jack@g.com",
+      "message": "Hello guys"
+    },
+    {
+      "id": "bf64",
+      "name": "amit",
+      "email": "pranjali@gmail.com",
+      "message": "hello how are you"
+    },
+    {
+      "id": "8f56",
+      "name": "Amit",
+      "email": "pranjalis241@gmail.com",
+      "message": "this"
+    },
+    {
+      "id": "8c66",
+      "name": "Amit",
+      "email": "pranjalis241@gmail.com",
+      "message": "Hello"
+    },
+    {
+      "id": "ae96",
+      "name": "Amitya",
+      "email": "pranjalis241@gmail.com",
+      "message": "Hello"
+    },
+    {
+      "id": "62da",
+      "name": "Amit",
+      "email": "pranjalis241@gmail.com",
+      "message": "hello\n"
+    },
+    {
+      "id": "e38c",
+      "name": "Anuv",
+      "email": "pranjalisingh54321@gmail.com",
+      "message": "good day"
+    },
+    {
+      "id": "a6c2",
+      "name": "Amit",
+      "email": "pranjalis241@gmail.com",
+      "message": "hello guys"
+    }
+  ],
+  "courses": [
+    {
+      "id": "1",
+      "title": "DSA in C++",
+      "author": "priya Sharma",
+      "description": "Master the Coding Interview by learning Data Structures & Algorithms.",
+      "image": "\\image\\Designer (4).png"
+    },
+    {
+      "id": "2",
+      "title": "Python Basics",
+      "author": "Raman Singh",
+      "description": "Learn Python programming from scratch. Perfect for beginners.",
+      "image": "\\image\\Designer (5).png"
+    },
+    {
+      "id": "3",
+      "title": "Web Development",
+      "author": "Shreya Gupta",
+      "description": "Dive into the world of web development with this hands-on course.",
+      "image": "\\image\\Designer (2).png"
+    }
+  ],
+  "allcourses": [
+    {
+      "id": "1",
+      "title": "Artificial Intelligence",
+      "description": " Explore the fundamentals of artificial intelligence, including machine learning, natural language processing, and practical applications in various industries.",
+      "image": "\\image\\gen.jpg",
+      "price": "$100",
+      "teacher": "John Doe"
+    },
+    {
+      "id": "2",
+      "title": "Cloud Computing",
+      "description": "Learn about cloud computing concepts and services like AWS, Azure, and Google Cloud,along with hands-on experience in cloud-based application.",
+      "image": "\\image\\cloud.jpg",
+      "price": "$120",
+      "teacher": "Jane Smith"
+    },
+    {
+      "id": "3",
+      "title": "Machine Learning",
+      "description": "Explore the exciting field of machine learning by learning key concepts such as supervised and unsupervised learning, neural networks, and deep learning.",
+      "image": "\\image\\machine.jpg",
+      "price": "$150",
+      "teacher": "Alice Johnson"
+    },
+    {
+      "id": "4",
+      "title": "Cybersecurity",
+      "description": " Learn the basics of cybersecurity and how to protect systems and data from cyber threats by learning cryptography, network security, and risk management.",
+      "image": "\\image\\cs.jpeg",
+      "price": "$200",
+      "teacher": "Bob Brown"
+    },
+    {
+      "id": "5",
+      "title": "Data Analytics",
+      "description": " Learn how to analyze and interpret large datasets. This course covers data mining, data visualization, and big data technologies like Hadoop and Spark",
+      "image": "\\image\\data.jpg",
+      "price": "$180",
+      "teacher": "Charlie Davis"
+    },
+    {
+      "id": "6",
+      "title": "Computer Networks",
+      "description": "Gain a comprehensive understanding of computer networks, including network architecture using TCP/IP, wireless networks, and network troubleshooting.",
+      "image": "\\image\\cn.webp",
+      "price": "$220",
+      "teacher": "Diana Evans"
+    }
+  ]
+}
