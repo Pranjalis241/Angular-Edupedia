@@ -39,17 +39,22 @@
                 <p><strong>Role:</strong> {{ user.role }}</p>
               </div>
             </div>
-            <div class="d-flex justify-content-center mt-3">
+            <div class="d-flex justify-content-center mt-4 gap-3">
               <button
-                class="btn btn-md btn-success px-4 py-2"
+                class="btn btn-md btn-success px-4 py-2 shadow-sm"
                 (click)="openEditModal(user)"
                 data-bs-toggle="modal"
                 data-bs-target="#editUserModal"
               >
                 Edit Profile
               </button>
+              <button
+                class="btn btn-md btn-danger px-4 py-2 shadow-sm"
+                (click)="deleteAccount()"
+              >
+                Delete Account
+              </button>
             </div>
-            
             
           </div>
         </div>
@@ -72,10 +77,11 @@
         </div>
       </div>
     </div>
-    <h2 class="text-center my-4" style="font-family:lora">Your Learning Progress</h2>
+    <!-- <h2 class="text-center my-4" style="font-family:lora">Your Learning Progress</h2>
+    
 <div style="width: 400px; height: 400px; margin: auto;">
   <canvas #chartCanvas></canvas>
-</div>
+</div> -->
 
 <!-- Edit User Modal -->
 <div

@@ -53,27 +53,6 @@
       "terms": true
     },
     {
-      "id": "f96c",
-      "name": "Naman",
-      "email": "users@gmail.com",
-      "dob": "2025-02-08",
-      "role": "user",
-      "phone": "7897654444",
-      "password": "userss",
-      "confirmPassword": "userss",
-      "terms": true,
-      "courses": [
-        {
-          "id": "4",
-          "title": "Cybersecurity",
-          "description": " Learn the basics of cybersecurity and how to protect systems and data from cyber threats by learning cryptography, network security, and risk management.",
-          "image": "\\image\\cs.jpeg",
-          "price": "$200",
-          "teacher": "Bob Brown"
-        }
-      ]
-    },
-    {
       "id": "522f",
       "name": "Vidhi",
       "email": "v@g.cm",
@@ -112,6 +91,14 @@
       "password": "jiyaaa",
       "confirmPassword": "jiyaaa",
       "terms": true
+    },
+    {
+      "id": "a45d",
+      "name": "ram",
+      "dob": "2025-01-02",
+      "email": "ram@g.cm",
+      "role": "trainer",
+      "password": "ram1234"
     }
   ],
   "contacts": [

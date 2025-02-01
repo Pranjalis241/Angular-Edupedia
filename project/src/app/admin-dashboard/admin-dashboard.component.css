@@ -21,4 +21,31 @@
   max-width: 90%;
 }
 
+/* Add smooth transition and shadow */
+/* Button styling */
+.chart-btn {
+  background-color: #fa93db; /* Light purple */
+  color:rgb(31, 30, 30);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.chart-btn:hover {
+  background-color: #f155dd; /* Darker purple on hover */
+  transform: scale(1.1);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Active Button Effect */
+.chart-btn:active {
+  transform: scale(1);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
 

@@ -3,9 +3,8 @@
   <span style="color: rgb(218, 13, 201)">{{ user.name }}!!</span>
 </h1>
 
-
 <div class="d-flex justify-content-center align-items-center">
-  <div class="col-12 col-md-6 col-lg-4 mx-auto"  >
+  <div class="col-12 col-md-6 col-lg-4 mx-auto">
     <div
       class="card p-3 shadow mb-4"
       style="background: linear-gradient(to bottom, #a5edff, #fad0c4 50%)"
@@ -31,7 +30,10 @@
     </div>
   </div>
 </div>
-<div class="d-flex justify-content-center align-items-center my-4" style="font-family: lora;">
+<div
+  class="d-flex justify-content-center align-items-center my-4"
+  style="font-family: lora"
+>
   <button
     class="btn btn-success"
     data-bs-toggle="modal"
@@ -42,7 +44,10 @@
 </div>
 
 <div class="table-responsive mt-4" *ngIf="users.length > 0; else noData">
-  <table class="table table-striped text-center" style="font-family: lora; font-size: large">
+  <table
+    class="table table-striped text-center"
+    style="font-family: lora; font-size: large"
+  >
     <thead class="bg-primary">
       <tr>
         <th>ID</th>
@@ -88,11 +93,13 @@
   tabindex="-1"
   aria-labelledby="editUserModalLabel"
   aria-hidden="true"
- >
-  <div class="modal-dialog" style="font-family: merriweather;">
+>
+  <div class="modal-dialog" style="font-family: merriweather">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title text-center w-100" id="editUserModalLabel">Edit User</h4>
+        <h4 class="modal-title text-center w-100" id="editUserModalLabel">
+          Edit User
+        </h4>
         <button
           type="button"
           class="btn-close"
@@ -174,10 +181,12 @@
   aria-labelledby="addUserModalLabel"
   aria-hidden="true"
 >
-  <div class="modal-dialog" style="font-family: merriweather;">
+  <div class="modal-dialog" style="font-family: merriweather">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title text-center w-100" id="addUserModalLabel">Add New User</h4>
+        <h4 class="modal-title text-center w-100" id="addUserModalLabel">
+          Add New User
+        </h4>
         <button
           type="button"
           class="btn-close"
@@ -258,26 +267,54 @@
   </div>
 </div>
 
-<div class="container mt-4" style="font-family: lora; font-size:20px">
-  <h2 class="text-center" style="font-family: merriweather; padding-top: 40px;">Contact details</h2>
+<div class="container mt-4" style="font-family: lora; font-size: 20px">
+  <h2 class="text-center" style="font-family: merriweather; padding-top: 40px">
+    Contact details
+  </h2>
 
-  <table class="table table-striped mt-4" style="padding: 10px; margin: 20px 0;">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Message</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let contact of contacts">
-        <td>{{ contact.id }}</td>
-        <td>{{ contact.name }}</td>
-        <td>{{ contact.email }}</td>
-        <td>{{ contact.message }}</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="table-responsive mt-4" *ngIf="users.length > 0; else noData">
+    <table
+      class="table table-striped mt-4"
+      style="padding: 10px; margin: 20px 0"
+    >
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Message</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let contact of contacts">
+          <td>{{ contact.id }}</td>
+          <td>{{ contact.name }}</td>
+          <td>{{ contact.email }}</td>
+          <td>{{ contact.message }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 
+<h2
+  class="text-center"
+  style="font-family: merriweather; padding-top: 45px; padding-bottom: 20px"
+>
+  Role-Based Distribution
+</h2>
+
+<!-- Chart Type Buttons with spacing, shadow, and hover effects -->
+<div class="text-center" style="margin-bottom: 20px">
+  <button (click)="changeChartType('pie')" class="chart-btn mx-4">Pie</button>
+  <button (click)="changeChartType('bar')" class="chart-btn mx-4">Bar</button>
+  <button (click)="changeChartType('line')" class="chart-btn mx-4">Line</button>
+  <button (click)="changeChartType('polarArea')" class="chart-btn mx-4">
+    Polar Area
+  </button>
+</div>
+
+<!-- Chart Canvas -->
+<div style="width: 400px; height: 400px; margin: auto">
+  <canvas #chartCanvas></canvas>
+</div>

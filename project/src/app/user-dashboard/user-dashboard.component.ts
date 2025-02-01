@@ -78,6 +78,21 @@ export class UserDashboardComponent  implements AfterViewInit{
     }
   }
   
+  deleteAccount(): void {
+    if (confirm('Are you sure you want to delete your account? This action cannot be undone.')) {
+      this.dataService.deleteUser(this.user.id).subscribe(
+        () => {
+          alert('Account deleted successfully!');
+          localStorage.removeItem('userEmail'); // Remove login session
+          this.router.navigate(['/signup']); // Redirect to the Signup Page
+        },
+        (error) => {
+          console.error('Error deleting account:', error);
+          alert('Failed to delete account. Please try again.');
+        }
+      );
+    }
+  }
   
 
   renderChart(): void {
@@ -89,7 +104,7 @@ export class UserDashboardComponent  implements AfterViewInit{
         labels: ['Completed', 'In Progress', 'Pending'],
         datasets: [
           {
-            data: [60, 25, 15], // Replace with dynamic values if needed
+            data: [60, 25, 15], 
             backgroundColor: ['#4CAF50', '#FFC107', '#F44336'],
           },
         ],
