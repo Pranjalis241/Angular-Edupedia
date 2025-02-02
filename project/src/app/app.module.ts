@@ -27,6 +27,7 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
 import { TrainerDashboardComponent } from './trainer-dashboard/trainer-dashboard.component';
 import { FaqComponent } from './faq/faq.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { ChatboxComponent } from './chatbox/chatbox.component';
 
 
 @NgModule({
@@ -49,6 +50,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
     TrainerDashboardComponent,
     FaqComponent,
     AdminDashboardComponent,
+    ChatboxComponent,
     
   ],
   imports: [

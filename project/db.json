@@ -161,6 +161,20 @@
       "name": "Amit",
       "email": "pranjalis241@gmail.com",
       "message": "hello guys"
+    },
+    {
+      "id": "ec04",
+      "prompt": {
+        "text": "hello"
+      },
+      "temperature": 0.7
+    },
+    {
+      "id": "18b6",
+      "prompt": {
+        "text": "what is web development"
+      },
+      "temperature": 0.7
     }
   ],
   "courses": [

@@ -11,8 +11,21 @@ export class DataService {
   private baseUrl = 'http://localhost:3000';
   private apiUrl = 'http://localhost:3000/contacts';  // for contacts data
   private usersUrl = 'http://localhost:3000/users';  // for users data
+  private geminiApiUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateText';
+  private apiKey = 'AIzaSyDURlxLZ9x0cUlnZ_wBn8tX14JjCYoFqvs';
 
   constructor(private http: HttpClient) {}
+
+  getResponse(message: string): Observable<any> {
+    const body = {
+      "model": "gemini-1.5-flash",  // Correct model name
+      "prompt": { "text": message },  // User's input text
+      "temperature": 0.7  // Optional, controls randomness
+    };
+
+  return this.http.post(`${this.geminiApiUrl}?key=${this.apiKey}`, body);
+}
+
 
   // Method to add a new contact
   addItem(item: any): Observable<any> {

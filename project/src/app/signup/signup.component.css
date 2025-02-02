@@ -72,12 +72,23 @@ h1 {
 .circle {
   position: absolute;
   border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-size: 49px; /* Adjust as needed */
+ 
+  font-family:  "Dancing Script", serif;;
+  font-optical-sizing: auto;
+ 
+ 
 }
+
 
 .circle1 {
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, #67fcfc, #000f4d);
+  background: radial-gradient(circle, #ffffff, #fa7ddb);  /*circle, #67fcfc, #000f4d*/
   top: 50px;
   left: 50px;
 }
@@ -85,7 +96,7 @@ h1 {
 .circle2 {
   width: 150px;
   height: 150px;
-  background: radial-gradient(circle, #f8f8fc, #5179fd);
+  background: radial-gradient(circle, #faf6f6, #5899E2);
   top: 0;
   right: 60px;
 }
@@ -93,7 +104,7 @@ h1 {
 .circle3 {
   width: 100px;
   height: 100px;
-  background: radial-gradient(circle, #d8fcfd, #dd3cfd);
+  background: radial-gradient(circle,rgb(255, 255, 255), #dd3cfd);
   bottom: 30px;
   left: 100px;
 }
@@ -101,7 +112,7 @@ h1 {
 .circle4 {
   width: 180px;
   height: 180px;
-  background: radial-gradient(circle,rgb(252, 244, 244), #fc95d6, #eb1298);
+  background: radial-gradient(circle,rgb(255, 255, 255), #fdb0e2, #f76cc2);
   bottom: 0;
   right: 0;
 }
