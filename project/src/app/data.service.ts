@@ -89,6 +89,9 @@ export class DataService {
     return forkJoin([allCourses$, updateUserCourses$]);
   }
   
+  updateCourseCount(courseId: string, count: number) {
+    return this.http.patch(`http://localhost:3000/allcourses/${courseId}`, { count });
+  }
   
 
  // Method to update user courses

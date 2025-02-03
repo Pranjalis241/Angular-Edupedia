@@ -27,18 +27,30 @@ export class CoursesComponent  {
     );
   }
   enrollInCourse(course: any) {
-    const userEmail = localStorage.getItem('userEmail');  // Get the logged-in user's email
+    const userEmail = localStorage.getItem('userEmail');  
     if (userEmail) {
       this.dataService.getUsers().subscribe((users) => {
         const user = users.find((u: any) => u.email === userEmail);
         if (user) {
-          // Add the selected course to the user's enrolled courses
-          this.dataService.updateUserCourses(user.id, course).subscribe(
+          // Increase course count
+          course.count = (course.count || 0) + 1;
+  
+          // First, update the course count
+          this.dataService.updateCourseCount(course.id, course.count).subscribe(
             () => {
-              alert('Successfully enrolled in the course!');
+              // Then, add the course to the user's enrolled courses
+              this.dataService.updateUserCourses(user.id, course).subscribe(
+                () => {
+                  alert('Successfully enrolled in the course!');
+                },
+                (error) => {
+                  console.error('Error updating user courses:', error);
+                  alert('Failed to enroll in course');
+                }
+              );
             },
             (error) => {
-              console.error('Error enrolling in course:', error);
+              console.error('Error updating course count:', error);
               alert('Failed to enroll in course');
             }
           );
@@ -48,5 +60,6 @@ export class CoursesComponent  {
       alert('Please log in first');
     }
   }
+  
   
  }

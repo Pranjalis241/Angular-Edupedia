@@ -12,20 +12,31 @@
       "terms": true,
       "courses": [
         {
-          "id": "6",
-          "title": "Computer Networks",
-          "description": "Gain a comprehensive understanding of computer networks, including network architecture using TCP/IP, wireless networks, and network troubleshooting.",
-          "image": "\\image\\cn.webp",
-          "price": "$220",
-          "teacher": "Diana Evans"
+          "id": "3",
+          "title": "Machine Learning",
+          "description": "Explore the exciting field of machine learning by learning key concepts such as supervised and unsupervised learning, neural networks, and deep learning.",
+          "image": "\\image\\machine.jpg",
+          "price": "$150",
+          "teacher": "Alice Johnson",
+          "count": 1
         },
         {
-          "id": "4",
-          "title": "Cybersecurity",
-          "description": " Learn the basics of cybersecurity and how to protect systems and data from cyber threats by learning cryptography, network security, and risk management.",
-          "image": "\\image\\cs.jpeg",
-          "price": "$200",
-          "teacher": "Bob Brown"
+          "id": "1",
+          "title": "Artificial Intelligence",
+          "description": " Explore the fundamentals of artificial intelligence, including machine learning, natural language processing, and practical applications in various industries.",
+          "image": "\\image\\gen.jpg",
+          "price": "$100",
+          "teacher": "John Doe",
+          "count": 2
+        },
+        {
+          "id": "5",
+          "title": "Data Analytics",
+          "description": " Learn how to analyze and interpret large datasets. This course covers data mining, data visualization, and big data technologies like Hadoop and Spark",
+          "image": "\\image\\data.jpg",
+          "price": "$180",
+          "teacher": "Charlie Davis",
+          "count": 1
         }
       ]
     },
@@ -39,7 +50,16 @@
       "password": "trainer",
       "confirmPassword": "trainer",
       "terms": true,
-      "courses": []
+      "courses": [
+        {
+          "title": "12th class",
+          "description": "paper",
+          "image": "\\image\\rahul_.jpg",
+          "price": "999",
+          "teacher": "Pranjali",
+          "id": "1738560534983"
+        }
+      ]
     },
     {
       "id": "7477",
@@ -64,20 +84,22 @@
       "terms": true,
       "courses": [
         {
+          "id": "1",
+          "title": "Artificial Intelligence",
+          "description": " Explore the fundamentals of artificial intelligence, including machine learning, natural language processing, and practical applications in various industries.",
+          "image": "\\image\\gen.jpg",
+          "price": "$100",
+          "teacher": "John Doe",
+          "count": 1
+        },
+        {
           "id": "3",
           "title": "Machine Learning",
           "description": "Explore the exciting field of machine learning by learning key concepts such as supervised and unsupervised learning, neural networks, and deep learning.",
           "image": "\\image\\machine.jpg",
           "price": "$150",
-          "teacher": "Alice Johnson"
-        },
-        {
-          "id": "2",
-          "title": "Cloud Computing",
-          "description": "Learn about cloud computing concepts and services like AWS, Azure, and Google Cloud,along with hands-on experience in cloud-based application.",
-          "image": "\\image\\cloud.jpg",
-          "price": "$120",
-          "teacher": "Jane Smith"
+          "teacher": "Alice Johnson",
+          "count": 2
         }
       ]
     },
@@ -161,20 +183,6 @@
       "name": "Amit",
       "email": "pranjalis241@gmail.com",
       "message": "hello guys"
-    },
-    {
-      "id": "ec04",
-      "prompt": {
-        "text": "hello"
-      },
-      "temperature": 0.7
-    },
-    {
-      "id": "18b6",
-      "prompt": {
-        "text": "what is web development"
-      },
-      "temperature": 0.7
     }
   ],
   "courses": [
@@ -207,7 +215,8 @@
       "description": " Explore the fundamentals of artificial intelligence, including machine learning, natural language processing, and practical applications in various industries.",
       "image": "\\image\\gen.jpg",
       "price": "$100",
-      "teacher": "John Doe"
+      "teacher": "John Doe",
+      "count": 2
     },
     {
       "id": "2",
@@ -215,7 +224,8 @@
       "description": "Learn about cloud computing concepts and services like AWS, Azure, and Google Cloud,along with hands-on experience in cloud-based application.",
       "image": "\\image\\cloud.jpg",
       "price": "$120",
-      "teacher": "Jane Smith"
+      "teacher": "Jane Smith",
+      "count": 0
     },
     {
       "id": "3",
@@ -223,7 +233,8 @@
       "description": "Explore the exciting field of machine learning by learning key concepts such as supervised and unsupervised learning, neural networks, and deep learning.",
       "image": "\\image\\machine.jpg",
       "price": "$150",
-      "teacher": "Alice Johnson"
+      "teacher": "Alice Johnson",
+      "count": 1
     },
     {
       "id": "4",
@@ -231,7 +242,8 @@
       "description": " Learn the basics of cybersecurity and how to protect systems and data from cyber threats by learning cryptography, network security, and risk management.",
       "image": "\\image\\cs.jpeg",
       "price": "$200",
-      "teacher": "Bob Brown"
+      "teacher": "Bob Brown",
+      "count": 0
     },
     {
       "id": "5",
@@ -239,7 +251,8 @@
       "description": " Learn how to analyze and interpret large datasets. This course covers data mining, data visualization, and big data technologies like Hadoop and Spark",
       "image": "\\image\\data.jpg",
       "price": "$180",
-      "teacher": "Charlie Davis"
+      "teacher": "Charlie Davis",
+      "count": 1
     },
     {
       "id": "6",
@@ -247,7 +260,8 @@
       "description": "Gain a comprehensive understanding of computer networks, including network architecture using TCP/IP, wireless networks, and network troubleshooting.",
       "image": "\\image\\cn.webp",
       "price": "$220",
-      "teacher": "Diana Evans"
+      "teacher": "Diana Evans",
+      "count": 0
     }
   ]
 }

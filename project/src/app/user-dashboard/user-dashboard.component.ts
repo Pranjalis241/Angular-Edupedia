@@ -63,12 +63,28 @@ export class UserDashboardComponent  implements AfterViewInit{
     );
   }
   
-  deleteCourse(courseId: number): void {
+  deleteCourse(courseId: any): void {
     if (confirm('Are you sure you want to delete this course?')) {
+      // Find the course in user's enrolled courses
+      const course = this.user.courses.find((c: any) => c.id === courseId);
+      if (!course) return;
+  
       this.dataService.deleteuserCourse(this.user.id, courseId).subscribe(
         () => {
-          alert('Course deleted successfully!');
-          this.loadUserData(); // Refresh the UI
+          // Decrease course count
+          course.count = Math.max((course.count || 1) - 1, 0); // Ensure count doesn't go negative
+  
+          // Update the course count in the database
+          this.dataService.updateCourseCount(courseId, course.count).subscribe(
+            () => {
+              alert('Course deleted successfully!');
+              this.loadUserData(); // Refresh UI
+            },
+            (error) => {
+              console.error('Error updating course count:', error);
+              alert('Failed to update course count.');
+            }
+          );
         },
         (error) => {
           console.error('Error deleting course:', error);
@@ -77,6 +93,7 @@ export class UserDashboardComponent  implements AfterViewInit{
       );
     }
   }
+  
   
   deleteAccount(): void {
     if (confirm('Are you sure you want to delete your account? This action cannot be undone.')) {

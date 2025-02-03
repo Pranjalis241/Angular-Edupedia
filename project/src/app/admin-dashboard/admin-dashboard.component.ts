@@ -1,7 +1,7 @@
 import { Component,OnInit, ElementRef,ViewChild,AfterViewInit} from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from '../data.service'; // Import the DataService
-import { Chart } from 'chart.js/auto';
+import { Chart, ChartConfiguration, ChartType } from 'chart.js/auto';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 
@@ -20,12 +20,29 @@ export class AdminDashboardComponent implements OnInit, AfterViewInit{
    @ViewChild('chartCanvas') chartCanvas!: ElementRef;
    chart!: Chart;
    chartType: string = 'pie'; // Default chart type
+   courses: any[] = [];
+   filteredCourses: any[] = []; 
+   searchQuery: string = '';
+    // Chart data
+  pieChartLabels: string[] = [];
+  pieChartData: number[] = [];
+  pieChartType: ChartType = 'pie';
+
   constructor(private dataService: DataService, private router: Router) {}
   
   ngOnInit(): void {
     this.loadUserData();
     this.fetchUsers();
     this.fetchContacts();
+     // Fetch courses and then initialize the chart
+  this.dataService.getAllCourses().subscribe((data) => {
+    this.courses = data;
+    this.pieChartLabels = this.courses.map(course => course.title);
+    this.pieChartData = this.courses.map(course => course.count || 0);
+
+    this.loadChart(); // Now call loadChart() after data is available
+  });
+   
   }
 
   ngAfterViewInit(): void {
@@ -135,6 +152,43 @@ export class AdminDashboardComponent implements OnInit, AfterViewInit{
     );
   }
 
+  loadChart() {
+    new Chart('pieChart', {
+      type: 'pie',
+      data: {
+        labels: this.pieChartLabels,
+        datasets: [
+          {
+            data: this.pieChartData,
+            backgroundColor: [
+              '#FF6384', '#36A2EB', '#FFCE56', '#4CAF50', '#FF9800', '#9C27B0','#f155dd'
+            ]
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+             position: 'bottom',
+            labels: {
+              font: {
+                size: 20  // Adjust size of legend labels
+              },  usePointStyle: true, // Makes icons small and inline
+              boxWidth: 20
+            }
+          },
+          tooltip: {
+            bodyFont: {
+              size: 24  // Adjust size of tooltip text
+            }
+          }
+        },
+       
+      }
+      
+    });
+  }
   // Fetch role counts and update chart dynamically
   loadChartData(): void {
     this.dataService.getUsers().subscribe((users) => { //Calls getUsers() from dataService to fetch user data.
