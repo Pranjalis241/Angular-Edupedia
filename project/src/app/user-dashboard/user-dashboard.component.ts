@@ -1,7 +1,11 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { Chart } from 'chart.js/auto';
 import { Router } from '@angular/router';
-import { DataService } from '../data.service'; // Import the DataService
+import { DataService } from '../data.service'; 
+import { Observable } from 'rxjs';
+import { select,Store } from '@ngrx/store';
+import { loginSuccess } from '../auth.action';
+import { AuthState } from '../auth.state';
 
 @Component({
   selector: 'app-user-dashboard',
@@ -10,14 +14,22 @@ import { DataService } from '../data.service'; // Import the DataService
   styleUrls: ['./user-dashboard.component.css']
 })
 export class UserDashboardComponent  implements AfterViewInit{
-  user: any; // To store the logged-in user's details
+   user: any; // To store the logged-in user's details
+   userWelcome$: Observable<{  name: string; email: string} | null>;
   selectedUser: any = {};
   users: any[] = [];
   @ViewChild('chartCanvas') chartCanvas!: ElementRef;
-  constructor(private dataService: DataService, private router: Router) {}
+  constructor(
+    private dataService: DataService,
+    private router: Router,
+    private store: Store<{ auth: AuthState }> // Inject NgRx store
+  ) {
+    // Select user from NgRx store
+    this.userWelcome$ = this.store.select((state) => state.auth.user);
+  }
   ngOnInit(): void {
-    this.loadUserData();
-    
+    this.loadUserData();//Existing RxJS function
+    this.loadWelcomeData(); // New function using NgRx
   }
 
   ngAfterViewInit(): void {
@@ -49,6 +61,24 @@ export class UserDashboardComponent  implements AfterViewInit{
       this.router.navigate(['/login']);
     }
   }
+   // New Function Using NgRx
+   loadWelcomeData() {
+    const userEmail = localStorage.getItem('userEmail');
+    if (userEmail) {
+      this.dataService.getUsers().subscribe(
+        (users) => {
+          const user = users.find((u: any) => u.email === userEmail);
+          if (user) {
+            this.store.dispatch(loginSuccess({ user })); // Store user in NgRx
+          }
+        },
+        (error) => {
+          console.error('Error loading welcome data:', error);
+        }
+      );
+    }
+  }
+
 
   updateUser(): void {
     this.dataService.updateUser(this.selectedUser.id, this.selectedUser).subscribe(

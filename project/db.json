@@ -2,11 +2,11 @@
   "users": [
     {
       "id": "638a",
-      "name": "Karan",
+      "name": "Karan Singh",
       "email": "k@gmail.com",
       "dob": "2025-01-02",
       "role": "user",
-      "phone": "9874339997",
+      "phone": "9874389899",
       "password": "karan1",
       "confirmPassword": "karan1",
       "terms": true,
@@ -121,6 +121,17 @@
       "email": "ram@g.cm",
       "role": "trainer",
       "password": "ram1234"
+    },
+    {
+      "id": "169f",
+      "name": "john k",
+      "email": "john@gmail.com",
+      "dob": "2025-02-13",
+      "role": "user",
+      "phone": "3434343455",
+      "password": "john12",
+      "confirmPassword": "john12",
+      "terms": true
     }
   ],
   "contacts": [

@@ -4,7 +4,6 @@ import { DataService } from '../data.service'; // Import the DataService
 import { Chart, ChartConfiguration, ChartType } from 'chart.js/auto';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 
-
 @Component({
   selector: 'app-admin-dashboard',
   standalone: false, 

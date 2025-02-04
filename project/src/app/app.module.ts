@@ -28,7 +28,8 @@ import { TrainerDashboardComponent } from './trainer-dashboard/trainer-dashboard
 import { FaqComponent } from './faq/faq.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { ChatboxComponent } from './chatbox/chatbox.component';
-
+import { StoreModule } from '@ngrx/store';
+import { authReducer } from './auth.reducer';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,9 @@ import { ChatboxComponent } from './chatbox/chatbox.component';
     ReactiveFormsModule,
     MaterialModule,
     MatGridListModule,
-      HttpClientModule
+      HttpClientModule,
+      
+    StoreModule.forRoot({ auth: authReducer }) // Register auth state
   ],
   providers: [
     DataService,

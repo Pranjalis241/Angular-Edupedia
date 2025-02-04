@@ -12,8 +12,10 @@
     }
   </style>
   
-    <h1 class="text-center my-5 fw-bold" style="font-family:lora">
-      Welcome in User Dashboard, <span style="color: rgb(218, 13, 201);">{{ user.name }}</span>
+    <h1 class="text-center my-5 mb-4 fw-bold" style="font-family:lora">
+      Welcome in User Dashboard, <span style="color: rgb(218, 13, 201);">{{  (userWelcome$ | async)?.name  }}</span> 
+      <!-- user$ | async subscribes to the Observable & extracts the latest value.
+      ?.name ensures Angular doesn't throw an error if user$ is initially null. -->
     </h1>
     <div class="explore-button-container">
       <button class="explore-button" routerLink="/courses">Click here to add courses</button>
