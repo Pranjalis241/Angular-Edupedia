@@ -15,7 +15,7 @@
           "id": "3",
           "title": "Machine Learning",
           "description": "Explore the exciting field of machine learning by learning key concepts such as supervised and unsupervised learning, neural networks, and deep learning.",
-          "image": "\\image\\machine.jpg",
+          "image": "assets\\image\\machine.jpg",
           "price": "$150",
           "teacher": "Alice Johnson",
           "count": 1
@@ -24,7 +24,7 @@
           "id": "1",
           "title": "Artificial Intelligence",
           "description": " Explore the fundamentals of artificial intelligence, including machine learning, natural language processing, and practical applications in various industries.",
-          "image": "\\image\\gen.jpg",
+          "image": "assets\\image\\gen.jpg",
           "price": "$100",
           "teacher": "John Doe",
           "count": 2
@@ -33,7 +33,7 @@
           "id": "5",
           "title": "Data Analytics",
           "description": " Learn how to analyze and interpret large datasets. This course covers data mining, data visualization, and big data technologies like Hadoop and Spark",
-          "image": "\\image\\data.jpg",
+          "image": "assets\\image\\data.jpg",
           "price": "$180",
           "teacher": "Charlie Davis",
           "count": 1
@@ -54,7 +54,7 @@
         {
           "title": "12th class",
           "description": "paper",
-          "image": "\\image\\rahul_.jpg",
+          "image": "assets\\image\\rahul_.jpg",
           "price": "999",
           "teacher": "Pranjali",
           "id": "1738560534983"
@@ -87,7 +87,7 @@
           "id": "1",
           "title": "Artificial Intelligence",
           "description": " Explore the fundamentals of artificial intelligence, including machine learning, natural language processing, and practical applications in various industries.",
-          "image": "\\image\\gen.jpg",
+          "image": "assets\\image\\gen.jpg",
           "price": "$100",
           "teacher": "John Doe",
           "count": 1
@@ -96,7 +96,7 @@
           "id": "3",
           "title": "Machine Learning",
           "description": "Explore the exciting field of machine learning by learning key concepts such as supervised and unsupervised learning, neural networks, and deep learning.",
-          "image": "\\image\\machine.jpg",
+          "image": "assets\\image\\machine.jpg",
           "price": "$150",
           "teacher": "Alice Johnson",
           "count": 2
@@ -202,21 +202,21 @@
       "title": "DSA in C++",
       "author": "priya Sharma",
       "description": "Master the Coding Interview by learning Data Structures & Algorithms.",
-      "image": "\\image\\Designer (4).png"
+      "image": "assets\\image\\Designer (4).png"
     },
     {
       "id": "2",
       "title": "Python Basics",
       "author": "Raman Singh",
       "description": "Learn Python programming from scratch. Perfect for beginners.",
-      "image": "\\image\\Designer (5).png"
+      "image": "assets\\image\\Designer (5).png"
     },
     {
       "id": "3",
       "title": "Web Development",
       "author": "Shreya Gupta",
       "description": "Dive into the world of web development with this hands-on course.",
-      "image": "\\image\\Designer (2).png"
+      "image": "assets\\image\\Designer (2).png"
     }
   ],
   "allcourses": [
@@ -224,7 +224,7 @@
       "id": "1",
       "title": "Artificial Intelligence",
       "description": " Explore the fundamentals of artificial intelligence, including machine learning, natural language processing, and practical applications in various industries.",
-      "image": "\\image\\gen.jpg",
+      "image": "assets\\image\\gen.jpg",
       "price": "$100",
       "teacher": "John Doe",
       "count": 2
@@ -233,7 +233,7 @@
       "id": "2",
       "title": "Cloud Computing",
       "description": "Learn about cloud computing concepts and services like AWS, Azure, and Google Cloud,along with hands-on experience in cloud-based application.",
-      "image": "\\image\\cloud.jpg",
+      "image": "assets\\image\\cloud.jpg",
       "price": "$120",
       "teacher": "Jane Smith",
       "count": 0
@@ -242,7 +242,7 @@
       "id": "3",
       "title": "Machine Learning",
       "description": "Explore the exciting field of machine learning by learning key concepts such as supervised and unsupervised learning, neural networks, and deep learning.",
-      "image": "\\image\\machine.jpg",
+      "image": "assets\\image\\machine.jpg",
       "price": "$150",
       "teacher": "Alice Johnson",
       "count": 1
@@ -251,7 +251,7 @@
       "id": "4",
       "title": "Cybersecurity",
       "description": " Learn the basics of cybersecurity and how to protect systems and data from cyber threats by learning cryptography, network security, and risk management.",
-      "image": "\\image\\cs.jpeg",
+      "image": "assets\\image\\cs.jpeg",
       "price": "$200",
       "teacher": "Bob Brown",
       "count": 0
@@ -260,7 +260,7 @@
       "id": "5",
       "title": "Data Analytics",
       "description": " Learn how to analyze and interpret large datasets. This course covers data mining, data visualization, and big data technologies like Hadoop and Spark",
-      "image": "\\image\\data.jpg",
+      "image": "assets\\image\\data.jpg",
       "price": "$180",
       "teacher": "Charlie Davis",
       "count": 1
@@ -269,7 +269,7 @@
       "id": "6",
       "title": "Computer Networks",
       "description": "Gain a comprehensive understanding of computer networks, including network architecture using TCP/IP, wireless networks, and network troubleshooting.",
-      "image": "\\image\\cn.webp",
+      "image": "assets\\image\\cn.webp",
       "price": "$220",
       "teacher": "Diana Evans",
       "count": 0
