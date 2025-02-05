@@ -9,13 +9,12 @@
     
   }
   .back{
-   
     /* background: linear-gradient(to right, pink, rgb(164, 227, 248));
     background: linear-gradient(to right, rgb(247, 206, 213), rgb(202, 235, 247));
     background: linear-gradient(61deg, rgba(255, 203, 215, 1) 10%, rgba(214, 255, 239, 1) 10%); */
     background: 
   linear-gradient(61deg, rgb(250, 222, 228) 50%, rgba(214, 255, 239, 1) 10%), 
-  linear-gradient(61deg, rgba(214, 255, 239, 1 )60%,  rgb(253, 212, 222)10%);
+  linear-gradient(61deg, rgba(214, 255, 239, 1 ) 60%,  rgb(253, 212, 222) 10%);
 
 /* Creates the square pattern by defining the size of the gradient */
 
