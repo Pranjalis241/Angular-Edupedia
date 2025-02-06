@@ -35,17 +35,17 @@ export class ChatboxComponent {
       - Admins can manage students and trainers.
       - Dashboards provide insights using bar and pie charts.
     - Courses Offered:
-      1. **Artificial Intelligence** – Fundamentals of AI, ML, NLP, and applications.
-      2. **Cloud Computing** – Concepts and services like AWS, Azure, and Google Cloud.
-      3. **Machine Learning** – Supervised/unsupervised learning, neural networks, deep learning.
-      4. **Cybersecurity** – Cryptography, network security, and risk management.
-      5. **Data Analytics** – Data mining, visualization, big data technologies like Hadoop and Spark.
-      6. **Computer Networks** – TCP/IP, wireless networks, and troubleshooting.
+      1. **Artificial Intelligence** - Fundamentals of AI, ML, NLP, and applications.
+      2. **Cloud Computing** - Concepts and services like AWS, Azure, and Google Cloud.
+      3. **Machine Learning** - Supervised/unsupervised learning, neural networks, deep learning.
+      4. **Cybersecurity** - Cryptography, network security, and risk management.
+      5. **Data Analytics** - Data mining, visualization, big data technologies like Hadoop and Spark.
+      6. **Computer Networks** - TCP/IP, wireless networks, and troubleshooting.
 
     - Free Courses:
-      1. **DSA in C++** – Master the Coding Interview by learning Data Structures & Algorithms (Author: Priya Sharma).
-      2. **Python Basics** – Learn Python programming from scratch, perfect for beginners (Author: Raman Singh).
-      3. **Web Development** – Dive into the world of web development with this hands-on course (Author: Shreya Gupta).
+      1. **DSA in C++** - Master the Coding Interview by learning Data Structures & Algorithms (Author: Priya Sharma).
+      2. **Python Basics** - Learn Python programming from scratch, perfect for beginners (Author: Raman Singh).
+      3. **Web Development** - Dive into the world of web development with this hands-on course (Author: Shreya Gupta).
 
     If a user asks a question unrelated to Edupedia, politely inform them that you can only answer questions about the platform.
   `;
