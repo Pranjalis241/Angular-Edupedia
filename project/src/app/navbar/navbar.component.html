@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <nav class="navbar navbar-expand-lg navbar-light" style="background: linear-gradient(61deg, rgba(255, 203, 215, 1) 10%, rgba(214, 255, 239, 1) 100%);">
   <div class="logo">
     <img src="assets/image/logo.jpg" alt="Edupedia Logo" class="navbar-brand" />
@@ -9,24 +10,29 @@
 
   <div class="collapse navbar-collapse" id="navbarNav">
     <div class="navbar-nav ms-auto"> <!-- Add ms-auto to align to the right -->
-      <a class="nav-link" routerLink="/home">Home</a>
+     <a class="nav-link" routerLink="/home"><i class="fa-solid fa-house"></i>Home</a>
 
       <!-- Courses Button with Dropdown -->
       <div class="dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Courses
+          <i class="fa-solid fa-book"></i>Courses
         </a>
         <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
           <li><a class="dropdown-item" routerLink="/courses">All Courses</a></li>
           <li><a class="dropdown-item" routerLink="/free">Free Courses</a></li>
-          <li><a class="dropdown-item" routerLink="/others">Others</a></li>
         </ul>
       </div>
 
-      <a class="nav-link" routerLink="/instructors">Instructors</a>
-      <a class="nav-link" routerLink="/faq">FAQs</a>
-      <a class="nav-link" routerLink="/contact">Contact Us</a>
-
+      <a class="nav-link" routerLink="/instructors">
+        <i class="fa-solid fa-chalkboard-teacher"></i>Instructors
+      </a>
+      <a class="nav-link" routerLink="/faq">
+        <i class="fa-solid fa-question-circle"></i>FAQs
+      </a>
+      <a class="nav-link" routerLink="/contact">
+        <i class="fa-solid fa-phone"></i>Contact Us
+      </a>
+      
      <!-- Login and Signup Buttons -->
 <button *ngIf="!isLoggedIn()" class="btn btn-outline-primary" routerLink="/signup" style="background-color: rgb(177, 64, 177); color: aliceblue;">Signup</button>
 <button *ngIf="!isLoggedIn()" class="btn btn-outline-secondary" routerLink="/login" style="background-color: rgb(177, 64, 177); color: aliceblue;">Login</button>
