@@ -24,7 +24,6 @@
     display: flex;
     flex-direction: column;
     animation: scroll 32s linear infinite;
- 
   }
   
   .review {
@@ -44,8 +43,8 @@
     color:#161616;
     font-family: 'Merriweather', serif;
   }
-  
-  @keyframes scroll {
+  /*moves the review upwards in steps,vertically on the Y-axis. */
+   @keyframes scroll {    
     0% {
       transform: translateY(0%);
     }

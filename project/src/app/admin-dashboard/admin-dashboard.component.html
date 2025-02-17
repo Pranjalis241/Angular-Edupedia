@@ -37,8 +37,9 @@
   <button
     class="btn btn-success"
     data-bs-toggle="modal"
-    data-bs-target="#addUserModal"
+    data-bs-target="#addUserModal"        
   >
+    <!-- This targets the modal with ID 'addUserModal' which is below in line 178 -->
     Add Users
   </button>
 </div>
@@ -108,7 +109,7 @@
         ></button>
       </div>
       <div class="modal-body">
-        <form (ngSubmit)="updateUser()">
+        <form (ngSubmit)="updateUser()">  <!--this function is in ts-->
           <div class="mb-3">
             <label for="editName" class="form-label">Name</label>
             <input

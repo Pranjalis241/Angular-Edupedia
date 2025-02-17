@@ -33,6 +33,8 @@ export class LoginComponent {
       // Use the login method from DataService to authenticate the user
       this.dataService.login(email, password).subscribe(
         (user) => {
+          console.log(user)
+          debugger
           // Successful login
           this.loginMessage = 'Login successful!';
 

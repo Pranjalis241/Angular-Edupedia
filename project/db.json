@@ -2,7 +2,7 @@
   "users": [
     {
       "id": "638a",
-      "name": "Karan Singh",
+      "name": "Karan",
       "email": "k@gmail.com",
       "dob": "2025-01-02",
       "role": "user",
@@ -52,12 +52,12 @@
       "terms": true,
       "courses": [
         {
-          "title": "12th class",
+          "title": "10th",
           "description": "paper",
           "image": "assets\\image\\rahul_.jpg",
-          "price": "999",
+          "price": "99",
           "teacher": "Pranjali",
-          "id": "1738560534983"
+          "id": "1739519237542"
         }
       ]
     },
@@ -70,7 +70,8 @@
       "phone": "7868765999",
       "password": "admin12",
       "confirmPassword": "admin12",
-      "terms": true
+      "terms": true,
+      "courses": []
     },
     {
       "id": "522f",
@@ -132,6 +133,17 @@
       "password": "john12",
       "confirmPassword": "john12",
       "terms": true
+    },
+    {
+      "id": "e478",
+      "name": "pranjali",
+      "email": "h@gmail.cm",
+      "dob": "2025-02-05",
+      "role": "user",
+      "phone": "",
+      "password": "psingh",
+      "confirmPassword": "psingh",
+      "terms": true
     }
   ],
   "contacts": [
@@ -166,24 +178,6 @@
       "message": "this"
     },
     {
-      "id": "8c66",
-      "name": "Amit",
-      "email": "pranjalis241@gmail.com",
-      "message": "Hello"
-    },
-    {
-      "id": "ae96",
-      "name": "Amitya",
-      "email": "pranjalis241@gmail.com",
-      "message": "Hello"
-    },
-    {
-      "id": "62da",
-      "name": "Amit",
-      "email": "pranjalis241@gmail.com",
-      "message": "hello\n"
-    },
-    {
       "id": "e38c",
       "name": "Anuv",
       "email": "pranjalisingh54321@gmail.com",
@@ -194,6 +188,18 @@
       "name": "Amit",
       "email": "pranjalis241@gmail.com",
       "message": "hello guys"
+    },
+    {
+      "id": "cd23",
+      "name": "Karan",
+      "email": "cs20042@glbitm.ac.in",
+      "message": "hello"
+    },
+    {
+      "id": "7643",
+      "name": "Amit",
+      "email": "cs20042@glbitm.ac.in",
+      "message": "hello"
     }
   ],
   "courses": [
@@ -273,6 +279,14 @@
       "price": "$220",
       "teacher": "Diana Evans",
       "count": 0
+    },
+    {
+      "id": "1739519237542",
+      "title": "10th",
+      "description": "paper",
+      "image": "assets\\image\\rahul_.jpg",
+      "price": "99",
+      "teacher": "Pranjali"
     }
   ]
 }

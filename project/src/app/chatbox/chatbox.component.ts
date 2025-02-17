@@ -11,7 +11,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 export class ChatboxComponent {
   userInput: string = '';
   chatHistory: { sender: string, message: string }[] = [];
-  private genAI = new GoogleGenerativeAI('AIzaSyDURlxLZ9x0cUlnZ_wBn8tX14JjCYoFqvs');
+  private genAI = new GoogleGenerativeAI('AIzaSyDURlxLZ9x0cUlnZ_wBn8tX14JjCYoFqvs'); //API Key
   private model = this.genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
   async sendMessage() {
